@@ -1,34 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coding Challenge
 
-## Getting Started
+This repository contains the source code for a responsive single-page web application created using the React.js frontend framework. The primary goal of this project is to transform and enhance the provided 'index.html' as the basis for the application while addressing any deficiencies. The aim is to create a visually appealing user interface within a reasonable timeframe.
 
-First, run the development server:
+## Key Tasks
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. **Application Development**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   * Create a responsive single-page application using React.js.
+   * Utilize 'index.html' as the starting point for development.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+   > **Note:** The original 'index.html' may have deficiencies that need to be addressed during development.
+   >
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   * Focus on optimizing the visual appearance of the application.
+2. **Sectors Selectbox**
 
-## Learn More
+   * Implement a "Sectors" select box within the application.
+   * Populate the database with all the entries from the "Sectors" select box.
+   * Dynamically compose the "Sectors" select box using data retrieved from the database.
+3. **User Data Handling**
 
-To learn more about Next.js, take a look at the following resources:
+   * After the user clicks the "Save" button, perform the following activities:
+     * Validate all input data, ensuring that all fields are mandatory.
+     * Store user input data in the database, including Name, Sectors, and Agree to terms.
+     * Refill the form with the stored data, enabling users to edit their own data during the session.
+4. **View Linkage**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   * Create links between two views within the application.
+   * Ensure that both views are responsive, providing a seamless user experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Libraries Used
 
-## Deploy on Vercel
+The project relies on the following libraries, as specified in the 'package.json' file:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>json</span><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="icon-sm" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-json">{
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
+    "autoprefixer": "10.4.15",
+    "clsx": "^2.0.0",
+    "eslint": "8.49.0",
+    "eslint-config-next": "13.4.19",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.5.1",
+    "next": "13.4.19",
+    "next-navigation": "^1.0.6",
+    "postcss": "8.4.29",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3"
+  }
+}
+</code></div></div></pre>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Please feel free to explore this repository to gain insights into the development of a modern and user-friendly web application.
