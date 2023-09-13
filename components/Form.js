@@ -2,6 +2,8 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
+import Swal from "sweetalert2";
+
 export default function Home() {
   const router = useRouter();
   const [name, setName] = useState("");
@@ -21,6 +23,13 @@ export default function Home() {
         setLoadingSectors(false);
       } catch (error) {
         alert("Error fetching sectors");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Error fetching sectors!",
+          footer: "Please try again..",
+          confirmButtonColor: "#3C4043"
+        });
         console.error("Error fetching sectors:", error);
       }
     };
@@ -45,11 +54,33 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     if (name === "") {
-      alert("Please enter your name.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please enter your name.",
+        footer: "Please try again..",
+        confirmButtonColor: "#3C4043"
+      });
+      return setLoading(false);
+    }
+    if (userSector === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please choose your sector.",
+        footer: "Please try again..",
+        confirmButtonColor: "#3C4043"
+      });
       return setLoading(false);
     }
     if (!agree) {
-      alert("Please check the checkbox.");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please check the checkbox.",
+        footer: "Please try again..",
+        confirmButtonColor: "#3C4043"
+      });
       return setLoading(false);
     }
     try {
@@ -64,10 +95,25 @@ export default function Home() {
       if (response.ok) {
         const userData = await response.json();
         const queryString = new URLSearchParams(userData).toString();
-        alert("User Created Successfully");
+        Swal.fire({
+          title: "User Created Successfully",
+          showClass: {
+            popup: "animate__animated animate__fadeInDown",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutUp",
+          },
+          confirmButtonColor: "#3C4043"
+        });
         router.push(`/edit?${queryString}`);
       } else {
-        alert("Error Creating user Data, Please try again...");
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Error Creating user Data",
+          footer: "Please try again..",
+          confirmButtonColor: "#3C4043"
+        });
         setLoading(false);
       }
     } catch (e) {
