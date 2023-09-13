@@ -77,8 +77,8 @@ export default function Home() {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Please check the checkbox.",
-        footer: "Please try again..",
+        text: "Kindly agree to terms",
+        footer: "Please check the checkbox.",
         confirmButtonColor: "#3C4043"
       });
       return setLoading(false);

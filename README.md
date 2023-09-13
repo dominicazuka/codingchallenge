@@ -1,12 +1,12 @@
 # Coding Challenge
 
-This repository contains the source code for a responsive single-page web application created using the React.js frontend framework. The primary goal of this project is to transform and enhance the provided 'index.html' as the basis for the application while addressing any deficiencies. The aim is to create a visually appealing user interface within a reasonable timeframe.
+This repository contains the source code for a responsive single-page web application created using the Next.js frontend framework. The primary goal of this project is to transform and enhance the provided 'index.html' as the basis for the application while addressing any deficiencies. The aim is to create a visually appealing user interface within a reasonable timeframe.
 
 ## Key Tasks
 
 1. **Application Development**
 
-   * Create a responsive single-page application using React.js.
+   * Create a responsive single-page application using Next.js.
    * Utilize 'index.html' as the starting point for development.
 
    > **Note:** The original 'index.html' may have deficiencies that need to be addressed during development.
@@ -48,6 +48,7 @@ The project relies on the following libraries, as specified in the 'package.json
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+ "sweetalert2": "^11.7.27",
     "tailwindcss": "3.3.3"
   }
 }
